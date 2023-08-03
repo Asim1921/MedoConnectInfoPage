@@ -1,38 +1,105 @@
-.App {
+/* Existing styles for .userinfo */
+.userinfo {
+  display: grid;
+  margin-top: 5vh;
+  padding: 20px;
+  grid-gap: 16px;
+}
+
+@media screen and (min-width: 750px) {
+  .userinfo {
+    grid-template-columns: 0.3fr 1fr;
+  }
+
+  .info-section {
+    border-right: 1px solid rgb(142, 144, 142);
+  }
+}
+
+.info-section {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.info-userimage {
+  width: 220px;
+  border-radius: 20px;
+}
+
+.info-username {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.info-usertype {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.info-enrollment {
+  background: rgb(236, 235, 235);
+  width: fit-content;
+  padding: 20px 80px 20px 20px;
+  border-radius: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.info-enrollment > div > h1 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.info-enrollment > div > p {
+  margin: 5px 0;
+}
+
+/* New styles for form elements */
+form {
+  display: grid;
+  grid-gap: 16px;
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 500px;
+  grid-column: 1 / -1;
+  margin: 5px 3px;
+  margin-left: 100px;
+}
+select {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 140px;
+  grid-column: 1 / -1;
+  margin: 5px 3px;
+  margin-left: 10px;
+}
+
+.buttons button {
+  padding: 10px;
+  color: rgb(70, 70, 73);
+  margin: 10px;
+  border-radius: 20px;
+  background-color: rgb(252, 252, 252);
+  border: 4px solid rgb(134, 134, 139);
+  font-size: 15px;
+}
+
+.buttons button:hover {
+  border: 4px solid blue;
+  background-color: blue;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  text-decoration: underline;
+  color: grey;
+  margin-left: 5px;
+  font-size: 10px;
 }
